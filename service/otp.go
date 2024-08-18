@@ -1,6 +1,7 @@
 package service
 
 import (
+	"be-golang-chapter-49/config"
 	"bytes"
 	"fmt"
 	"math/rand"
@@ -38,15 +39,13 @@ func SendOTPEmail(to string, otp string) error {
 		return fmt.Errorf("error executing template: %v", err)
 	}
 
-	// Buat pesan email
 	m := gomail.NewMessage()
-	m.SetHeader("From", "youremail@example.com")
+	m.SetHeader("From", config.AppConfig.FromEmail)
 	m.SetHeader("To", to)
 	m.SetHeader("Subject", "Your OTP Code")
 	m.SetBody("text/html", body.String())
 
-	// Setup SMTP dialer
-	d := gomail.NewDialer("smtp.example.com", 587, "youremail@example.com", "yourpassword")
+	d := gomail.NewDialer(config.AppConfig.SMTPHost, config.AppConfig.SMTPPort, config.AppConfig.SMTPUser, config.AppConfig.SMTPPassword)
 
 	// Kirim email
 	if err := d.DialAndSend(m); err != nil {
