@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"be-golang-chapter-49/service"
+	"be-golang-chapter-49/LA-Chapter-49D/service"
 	"fmt"
 	"net/http"
 )

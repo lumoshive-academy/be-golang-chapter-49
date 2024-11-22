@@ -1,7 +1,7 @@
 package service
 
 import (
-	"be-golang-chapter-49/config"
+	"be-golang-chapter-49/LA-Chapter-49D/config"
 	"bytes"
 	"fmt"
 	"math/rand"

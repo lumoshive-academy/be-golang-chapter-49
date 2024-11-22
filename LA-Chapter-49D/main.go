@@ -1,8 +1,8 @@
 package main
 
 import (
-	"be-golang-chapter-49/config"
-	"be-golang-chapter-49/handler"
+	"be-golang-chapter-49/LA-Chapter-49D/config"
+	"be-golang-chapter-49/LA-Chapter-49D/handler"
 	"log"
 	"net/http"
 )
