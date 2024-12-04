@@ -29,7 +29,7 @@ func main() {
 			},
 			To: &mailjet.RecipientsV31{
 				mailjet.RecipientV31{
-					Email: "sidikdoojoon@gmail.com",
+					Email: "lumoshive.academy@gmail.com",
 					Name:  "lumos_testing",
 				},
 			},
